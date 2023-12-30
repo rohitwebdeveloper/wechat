@@ -1,0 +1,490 @@
+* {
+   margin: 0px;
+   padding: 0px;
+   text-decoration: none;
+   font-family: monospace;
+   font-weight: bold;
+   box-sizing: border-box;
+}
+
+html {
+   font-size: 16px;
+}
+
+body {
+   background-color: black;
+}
+
+
+.container {
+   min-height: 100vh;
+   height: 100%;
+   width: 100%;
+   background-color: rgb(0, 0, 0);
+   display: block;
+   margin: auto;
+   overflow: hidden;
+}
+
+.chat_container {
+   display: flex;
+   flex-direction: row;
+   width: 100%;
+}
+
+.chat_area {
+   display: flex;
+   flex-direction: column;
+   background-color: rgb(0, 0, 0);
+   min-height: 100vh;
+   height: 100%;
+   max-width: 1200px;
+   width: 100%;
+   margin: auto;
+   margin-top: 20px;
+}
+
+.message-box {
+   background-color: rgb(0, 0, 0);
+   min-height: 100vh;
+   height: 100%;
+   max-width: 1200px;
+   width: 100%;
+   margin: auto;
+}
+
+.right {
+   float: right;
+   clear: both;
+   max-width: 30vw;
+   text-align: center;
+   background-color: #b2e8ff;
+   border-radius: 10px 10px 0px 10px;
+   color: black;
+   padding: 9px;
+   margin: 7px 30px 7px 0px;
+   box-shadow: 0px 0px 5px 0px #ffffff;
+   overflow-x: hidden;
+}
+
+.left {
+   float: left;
+   clear: both;
+   max-width: 30vw;
+   background-color: #26a6ff;
+   border-radius: 10px 10px 10px 0px;
+   color: rgb(0, 0, 0);
+   padding: 9px;
+   text-align: center;
+   margin: 7px 0px 7px 30px;
+   overflow-x: hidden;
+}
+
+
+.connected-box {
+   max-width: 250px;
+   width: 100%;
+   min-height: calc(100vh - 160px);
+   height: 100%;
+   font-size: 1.2rem;
+   color: black;
+   border-radius: 20px 0px 0px 20px;
+   background-color: #50b7ff;
+   float: right;
+   margin: 20px 0px;
+   text-align: center;
+   padding: 2px 14px;
+   overflow: auto;
+}
+
+.roomid {
+   background-color: white;
+   border-radius: 5px;
+   width: 90%;
+   font-size: 1.15rem;
+   padding: 5px 10px;
+   display: block;
+   margin: 5px auto;
+   height: auto;
+}
+
+.navbar {
+   height: 60px;
+   width: 100vw;
+   background-color: #0096ff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+
+nav {
+   max-width: 1450px;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+}
+
+
+form {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   max-width: 1000px;
+   width: 100%;
+   /* margin: 50px auto 10px auto; */
+   position: fixed;
+   bottom: 10px;
+   right: 0px;
+   left: 0px;
+   margin: auto auto;
+}
+
+.input-message {
+   max-width: 700px;
+   width: 100%;
+   height: 35px;
+   border: 2px solid #0096ff;
+   box-shadow: 0px 0px 5px 0px #21a6ef;
+   background-color: transparent;
+   color: #ffffff;
+   display: inline-block;
+   border-radius: 30px;
+   font-size: 1rem;
+   outline: none;
+   margin: 10px 50px 10px 50px;
+   text-align: center;
+   padding: 0px 10px;
+}
+
+
+.userinfo_container {
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   margin: auto auto;
+   width: 100%;
+   height: 100vh;
+   background-color: black;
+   z-index: 2;
+   
+   
+}
+
+.userinfo_heading {
+   width: fit-content;
+   text-align: center;
+   display: block;
+   margin: 20px auto;
+   height: 60px;
+}
+
+.userinfo {
+   width: 300px;
+   height: auto;
+   display: block;
+   margin: 100px auto;
+   border-radius: 3px;
+   background-color: #5eb6ff;
+   padding: 20px 0px;
+}
+
+
+h1 {
+   color: #ffffff;
+   margin: 0px 20px;
+   border: 2px solid rgb(255, 255, 255);
+   border-radius: 5px;
+   padding: 3px;
+}
+
+span {
+   color: #ffe100;
+}
+
+
+
+.btn {
+   display: inline-block;
+   height: 35px;
+   width: 100px;
+   border-radius: 20px;
+   margin: auto 10px;
+}
+
+.exit-btn {
+   margin: 10px 0px 5px 0px;
+   border: 2px solid #000000;
+   color: #ffffff;
+   background-color: rgb(0, 0, 0);
+   font-size: 1.15rem;
+   padding: 2px 8px;
+   border-radius: 5px;
+   width: 90%;
+}
+
+.exit-btn:hover {
+   color: white;
+   background-color: red;
+   border-color: red;
+   box-shadow: 0px 0px 5px 0px rgb(0, 0, 0);
+}
+
+.li {
+   color: black;
+}
+
+.join-btn {
+   display: block;
+   margin: 10px auto auto auto;
+   width: auto;
+   font-size: 1.1rem;
+   padding: 5px 8px;
+   border: 2px solid black;
+   border-radius: 5px;
+   width: 90%;
+   color: white;
+   background-color: black;
+}
+
+.create-btn {
+   display: block;
+   margin: 40px auto auto auto;
+   width: auto;
+   font-size: 1.1rem;
+   padding: 5px 8px;
+   border: 2px solid #ff0000;
+   border-radius: 5px;
+   width: 90%;
+   color: white;
+   background-color: #ff0000;
+}
+
+.create-btn:hover {
+   box-shadow: 0px 0px 5px 0px #ff0000;
+
+}
+
+.join-btn:hover {
+   box-shadow: 0px 0px 5px 0px #000000;
+
+}
+
+.user {
+   display: block;
+   margin: 20px auto;
+   width: 90%;
+   font-size: 1.05rem;
+
+}
+
+.note {
+   display: block;
+   width: 85%;
+   font-size: 1.05rem;
+   padding: 3px 8px;
+   margin: 0px auto;
+   background-color: #a2d3ff;
+   color: black;
+   border-radius: 5px;
+}
+
+.user input {
+   height: 35px;
+   border-radius: 3px;
+   padding: 5px 13px;
+   width: 100%;
+   border: 1px solid #5eb6ff;
+   display: inline-block;
+   margin: auto;
+   font-weight: bold;
+   font-size: 1rem;
+   outline: none;
+
+}
+
+h3 {
+   color: white;
+   padding: 5px 10px;
+   margin-top: 20px;
+   margin-bottom: 13px;
+   width: 100%;
+   border-bottom: 2px solid white;
+   font-weight: bolder;
+
+}
+
+.h2 {
+   border: 2px solid black;
+   font-size: 2rem;
+}
+
+.ollist {
+   margin-left: 20px;
+   width: 80%;
+
+}
+
+.ollist li {
+   text-align: left;
+   list-style: disc;
+}
+
+.logined_user {
+   margin: auto 20px auto auto;
+   background-color: #000000;
+   color: white;
+   border-radius: 16px 0px 0px 16px;
+   padding: 5px 10px;
+   font-size: 1.3rem;
+}
+
+.hammenu_user {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   margin: auto 30px auto auto;
+}
+
+.ham_logo span {
+   width: 30px;
+   height: 4px;
+   background-color: white;
+   margin: 3px;
+   border-radius: 2px;
+   display: none;
+}
+
+
+.joining_leaving_message {
+   position: absolute;
+   top: 60px;
+   right: 0px;
+   left: 0px;
+   margin: auto auto;
+   max-width: 70vw;
+   width: 100%;
+   background-color: transparent;
+   height: 50px;
+   color:#ffffff;
+   font-size: 1.3rem;
+   text-align: center;
+   z-index: 1;
+
+}
+
+p{
+   font-size: 1rem;
+   text-align: right;
+   margin-top: 2px;
+   color: #000000;
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/* MEDIA QUERY AT 850PX  */
+
+@media(max-width:860px) {
+
+   html {
+      font-size: 13px;
+   }
+
+   .ham_logo span {
+      display: block;
+
+   }
+
+   .connected-box {
+      max-width: 210px;
+      position: fixed;
+      top: 48px;
+      right: -100%;
+      width: 0%;
+      transition: 0.3s;
+      height: 85%;
+   }
+
+   .connected-box.active {
+      right: 0%;
+      width: 100%;
+   }
+
+   .right {
+      max-width: 37vw;
+   }
+
+   .left {
+      max-width: 37vw;
+   }
+
+
+   /* .right and .left message height decrease and input message write width and height decrease and adding user joined and user left message with settimeout function */
+
+}
+
+@media(max-width:620px) {
+
+   html {
+      font-size: 11px;
+   }
+
+   .navbar {
+      height: 48px;
+   }
+
+   .connected-box {
+      max-width: 150px;
+      margin: 10px 0px;
+      height: 80%;
+   }
+
+   .right {
+      padding: 5px;
+      margin: 4px 10px 4px 0px;
+      box-shadow: 0px 0px 2px 0px #ffffff;
+      border-radius: 7px 7px 0px 7px;
+   }
+
+   .left {
+      padding: 5px;
+      margin: 4px 0px 4px 10px;
+      border-radius: 7px 7px 7px 0px;
+   }
+
+   .input-message {
+      height: 30px;
+      border: 1.5px solid #0096ff;
+      box-shadow: 0px 0px 3px 0px #21a6ef;
+      margin: 10px 15px 10px 27px;
+      padding: 0px 8px;
+      border-radius: 20px;
+   }
+
+   .btn {
+      height: 30px;
+      width: 50px;
+      border-radius: 14px;
+   }
+
+   .userinfo {
+      width: 220px;
+      height: auto;
+   }
+
+   .userinfo_heading {
+      margin: 0px auto;
+   }
+
+   .user input {
+      height: 30px;
+      border-radius: 2px;
+      padding: 4px 10px;
+
+   }
+
+
+}

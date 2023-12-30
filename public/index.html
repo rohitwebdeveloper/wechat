@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+   <div class="container">
+      <div class="navbar">
+         <nav>
+            <h1>We<span>T</span>alk</h1>
+            <div class="hammenu_user">
+               <div class="logined_user"></div>
+               <div class="ham_logo">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </div>
+            </div>
+         </nav>
+      </div>
+      <div class="joining_leaving_message">
+         Rohit Kushwaha has joined!
+      </div>
+      <div class="chat_container">
+         <div class="chat_area">
+            <div class="message-box">
+            </div>
+
+
+            <form action="/message" method="post" id="form" >
+               <input class="input-message" type="text" placeholder="Type Message" name="message">
+               <button class="btn" type="submit">Send</button>
+            </form>
+
+
+         </div>
+         <div class="connected-box">
+            <div><button class="exit-btn"> Leave Chat</button></div>
+            <div class="roomid">RoomId: </div>
+            <h3 class="h3">People Connected</h3>
+            <div class="connected_people">
+
+            </div>
+         </div>
+         <div class="userinfo_container">
+            <div class="userinfo">
+               <div>
+                  <div class="userinfo_heading">
+                     <div class="h2">We<span>T</span>alk</div>
+                  </div>
+                  <div class="user">
+                     <input type="text" class="username" placeholder="Enter Name">
+                  </div>
+                  <div class="user">
+                     <input type="text" class="roomname" placeholder="Enter Room Id">
+                  </div>
+                  <div class="note">
+                     Note: Please enter unique Roomid that contains numbers, uppercase and lowercase letters. <br> Ex:
+                     abc63eF, Room5423
+                  </div>
+                  <button class="create-btn">Create Chat</button>
+                  <button class="join-btn">Join Chat</button>
+               </div>
+            </div>
+
+         </div>
+         <!--  -->
+      </div>
+   </div>
+   <script src="client.js"></script>
+</body>
+
+</html>
